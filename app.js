@@ -468,8 +468,8 @@ function agregaralchat(mensaje, emisor, fecha, level) {
   
   if (emisor === "Cristobal Iturriaga"){
     nuevoMensaje.innerHTML = `
-     <br><span style="color: blue; font-size: 12px;">[${fecha}]</span><br>
-      <br><span style="color: green; font-size: 12px;">YO: ${mensaje}</span><br>
+     <br><span style="color: blue; font-size: 12px;">[${fecha}]</span>
+      <br><span style="color: green; font-size: 12px;">Enviado: ${mensaje}</span><br>
     `;
   }
   else if (level === "warn"){
