@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Visualización de Satélites</title>
+</head>
+<body>
+  <div id="container">
+    <h1 id="title">Visualización de satélites</h1> 
+    <div id="globeViz"></div>
+    <div id="controls" style="margin-top: 20px;"></div>
+    
+    <div id="infoPanel"></div>
+    
+  </div>
+
+  <div id="informacionAntena" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <div id="infoText"></div>
+    </div>
+  </div>
+  <div id="informacionSatelite" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <div id="infoTextSatelite"></div>
+    </div>
+  </div>
+  <div id="informacioncentro" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <div id="infoTextcentro"></div>
+    </div>
+  </div>
+  
+
+  <div id="chat-widget">
+    <div id="chat-header">Chat</div>
+    <div id="chat-messages">
+    </div>
+    <div id="chat-input-area">
+      <input type="text" id="chat-input" placeholder="Escribe un mensaje...">
+      <button id="chat-send">Enviar</button>
+    </div>
+  </div>
+  
+  <div id="lanzamiento" style="display:none; position:fixed; top:10%; left:40%; transform:translateX(-50%); background:#ff4444; color:white; padding:20px; font-size:15px; border-radius:10px; z-index:9999;">
+    🚀 ¡LANZAMIENTO! <br><span id="satelliteInfo"></span>
+  </div>
+  <div id="FALLA" style="display:none; position:fixed; top:10%; left:40%; transform:translateX(-50%); background:#f97d01; color:white; padding:20px; font-size:15px; border-radius:10px; z-index:9999;">
+    🔥💣💥 ¡FALLA CATASTROFICA! <br><span id="satelliteInform"></span>
+  </div>
+
+  <button id="disableWarningsBtn" style="position:fixed; top:92%; right:64%; padding:10px; font-size:16px; background-color:red; color:white; border:none; border-radius:5px; z-index:10000;">
+    Desactivar Advertencias
+  </button>
+  <button id="disableupdate" style="position:fixed; top:92%; right:53.2%; padding:10px; font-size:16px; background-color:rgb(89, 255, 0); color:white; border:none; border-radius:5px; z-index:10000;">
+    Estabilizar satellites
+  </button>
+  <script src="https://unpkg.com/globe.gl"></script>
+  <script src="app.js"></script>
+  
+</body>
+</html>
